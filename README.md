@@ -1,2 +1,2 @@
 # AutomaticPlantWateringSystem
-kjkjkbb
+In this project we have set up a monitoring and a watering system with the help of "Arduino" which continuously monitors the soil, it’s moisture and humidity, temperature of the surroundings. As the moisture level in the soil drops to a certain threshold, it automatically starts watering the plant using a water pamp. The notification and the moisture level are shared to the user using a LCD display.
