@@ -92,8 +92,6 @@ void loop()
   {
     lcd.setCursor(11, 2);
     lcd.print("DRY SOIL");
-    //lcd.setCursor(15, 1);
-    //lcd.print("SOIL");
     if (digitalRead(W_led) == 1 && rain == 0) //test the availability of water in storage
     {
       digitalWrite(13, HIGH);
@@ -143,8 +141,6 @@ void loop()
   {
     lcd.setCursor(11, 2);
     lcd.print("MOISTSOIL");
-    //lcd.setCursor(11, 2);
-    //lcd.print("SOIL");
     digitalWrite(13, LOW);
     sms();
     lcd.setCursor(0, 2);
@@ -280,10 +276,8 @@ void sms2()
   SIM900.println("AT + CMGS = \"+91xxxxxxxxxx\"");// recipient's mobile number
   SIM900.println("WATERING PUMP IS ON"); // message to send
   Serial.println("WATERING PUMP IS ON");
-  //delay(200);
   SIM900.println((char)26); // End AT command with a ^Z, ASCII code 26
   Serial.println((char)26);
-  //delay(200);
   SIM900.println();
 }
 
@@ -294,9 +288,7 @@ void sms3()
   SIM900.println("AT + CMGS = \"+91xxxxxxxxxx\"");// recipient's mobile number
   SIM900.println("TANK PUMP IS ON"); // message to send
   Serial.println("TANK PUMP IS ON");
-  //delay(200);
   SIM900.println((char)26); // End AT command with a ^Z, ASCII code 26
   Serial.println((char)26);
-  //delay(200);
   SIM900.println();
 }
